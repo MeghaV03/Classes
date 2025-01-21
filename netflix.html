@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .logo {
+            color: #e50914;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .controls {
+            display: flex;
+            gap: 15px;
+        }
+        .controls a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .main-content {
+            text-align: center;
+            max-width: 600px;
+            margin: auto;
+        }
+        .main-content h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .email-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .email-input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+        }
+        .get-started-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #e50914;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Netflix</a>
+        <div class="controls">
+            <a href="#">Sign In</a>
+            <a href="#">Language</a>
+        </div>
+    </header>
+    <div class="main-content">
+        <h1>Unlimited movies, TV shows, and more.</h1>
+        <p>Watch anywhere. Cancel anytime.</p>
+        <p>Ready to watch? Enter your email to create or restart your membership.</p>
+        <div class="email-form">
+            <input type="email" class="email-input" placeholder="Email address">
+            <button class="get-started-button">Get Started</button>
+        </div>
+    </div>
+</body>
+</html>

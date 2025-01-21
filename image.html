@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>sample image</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+               align-items: center; 
+               background-color: #f4f4f4;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                border: 2px solid #f40505;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+            button{
+                margin-top: 20px;
+                padding: 10px 20px;
+                font-size: 16px;
+                color: aqua;
+                background-color: #007bff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+                transition: background-colour 0.3s ease, transform 0.2s ease;
+            }
+            .btn-blue {
+            color: #fff;
+            background-color: #ff009d;
+        }
+        .btn-blue:hover {
+            background-color: #b36b00;
+        }
+        .btn-blue.active {
+            background-color: #d2f50e; /* Green */
+            color: #fff;
+            transform:scale(0.95);
+            cursor: progress;
+            padding: 0;
+            margin-top: 0%;
+        }
+        .btn-red {
+            color: #f70b0b;
+            background-color: #d6b3b6;
+        }
+        .btn-red:hover {
+            background-color: #a71d2a;
+        }
+        .btn-red.active {
+            background-color: #ffc107; /* Yellow */
+            color: #000;
+            
+            }
+            button:active{
+                background-color: #3cff00;
+                color: rgb(248, 5, 5);
+                transform:scale(0.95);
+                cursor: progress;
+                padding: 0;
+                margin-top: 0%;
+            }
+        </style>
+    </head>
+    <h1>sample image with styles</h1>
+    <body>
+        <button onclick="alert('button clicked!')">click me</button>
+        <img src="https://img.freepik.com/free-psd/sunset-hibiscus-flower-isolated-transparent-background_191095-29610.jpg" alt="sample" title="sample">
+    <div class="btn-container">
+        <button class="btn btn-blue" id="btnBlue">pink Button</button>
+        <button class="btn btn-red" id="btnRed">Red Button</button>
+    </div>
+    </body>
+</html>

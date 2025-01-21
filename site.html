@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Purchase</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white py-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Megha's Shop</h1>
+      <button class="bg-white text-blue-600 px-4 py-2 rounded shadow hover:bg-gray-100">
+        Cart (<span id="cart-count">0</span>)
+      </button>
+    </div>
+  </header>
+
+  <!-- Product Section -->
+  <main class="container mx-auto py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Product Card -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <img src="https://e7.pngegg.com/pngimages/48/269/png-clipart-automatic-watch-titan-company-rolex-analog-watch-watch-brown-watch-accessory-thumbnail.png" alt="Product Image" class="w-60 h-64 object-cover rounded mb-4">
+        <h2 class="text-xl font-bold mb-2">Titan Brown Analog Watch</h2>
+        <p class="text-gray-700 mb-4">Brown Analog Watch with Leather Strap - This elegant timepiece features a sophisticated brown dial and a sleek brown leather strap. The analog display ensures timeless style, making it perfect for both formal and casual occasions. The watch is powered by a quartz movement and is water-resistant up to 50 meters. It comes with a 2-year warranty from the manufacturer.</br></p>
+
+         <p> Price:
+          ₹10,895 (approximately $150).</p>
+        <div class="mb-4">
+          <span class="text-yellow-500">&#9734;&#9734;&#9734;&#9734;&#9734;</span> (4/5 Ratings)
+        </div>
+        <button
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500"
+          onclick="addToCart()">Add to Cart</button>
+      </div>
+
+      <!-- Review Section -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-xl font-bold mb-4">Reviews</h2>
+        <div id="reviews" class="space-y-4">
+          <div class="border-t pt-4">
+            
+          </div>
+        </div>
+        <form id="review-form" class="mt-6">
+          <textarea id="review-input" class="w-full border rounded p-2 mb-2" placeholder="Write a review..." rows="3"></textarea>
+          <button type="submit"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Submit Review</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-4 mt-8">
+    <p>&copy; 2025 Megha's Shop. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let cartCount = 0;
+
+    // Add to Cart Functionality
+    function addToCart() {
+      cartCount++;
+      document.getElementById('cart-count').textContent = cartCount;
+      alert('Product added to cart!');
+    }
+
+    // Review Submission
+    document.getElementById('review-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const reviewText = document.getElementById('review-input').value.trim();
+      if (reviewText) {
+        const reviewsContainer = document.getElementById('reviews');
+        const reviewElement = document.createElement('div');
+        reviewElement.classList.add('border-t', 'pt-4');
+        reviewElement.innerHTML = <p class="text-gray-700">"${reviewText}" - <span class="font-bold">Anonymous</span></p>;
+        reviewsContainer.appendChild(reviewElement);
+        document.getElementById('review-input').value = '';
+      } else {
+        alert('Please write a review before submitting.');
+      }
+    });
+  </script>
+
+</body>
+
+</html>

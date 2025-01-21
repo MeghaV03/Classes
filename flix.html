@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Lookalike</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: transparent;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .logo img {
+            width: 120px;
+        }
+
+        .top-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        button {
+            font-size: 14px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #fff;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        button:hover {
+            background: #e50914;
+            border-color: #e50914;
+        }
+
+        /* Main Content Styling */
+        main {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            margin: auto;
+        }
+
+        .mid-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .mid-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .mid-content p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .email-box {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .email-box input {
+            flex: 1;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+        }
+
+        .get-started-btn {
+            padding: 15px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #e50914;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .get-started-btn:hover {
+            background-color: #f40612;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Netflix Logo -->
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo">
+            </div>
+            <!-- Top Right Buttons -->
+            <div class="top-buttons">
+                <button class="language-btn">Language</button>
+                <button class="signin-btn">Sign In</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Centered Content -->
+        <div class="mid-content">
+            <h1>Unlimited movies, TV shows, and more.</h1>
+            <h2>Watch anywhere. Cancel anytime.</h2>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="email-box">
+                <input type="email" placeholder="Email address" required>
+                <button class="get-started-btn">Get Started &gt;</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
